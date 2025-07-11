@@ -5,12 +5,12 @@ const quizData = [
     source: 'https://example.com/police1'
   },
   {
-    filename: 'Terror1.jpg',
+    filename: 'terror1.jpg',
     answer: 'Terrorist',
     source: 'https://example.com/paramilitary2'
   },
   {
-    filename: 'Terror2.jpg',
+    filename: 'terror2.jpg',
     answer: 'Terrorist',
     source: 'https://example.com/police3'
   },
