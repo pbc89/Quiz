@@ -75,11 +75,24 @@ function showResult() {
 
 function shareResults() {
   const url = encodeURIComponent(window.location.href);
-  const text = encodeURIComponent(`I scored ${score}/${quizData.length} on the ICE or Terrorist? quiz! Can you beat me?`);
+  const text = `I scored ${score}/${quizData.length} on the "Police or Paramilitary?" quiz!`;
 
-  const twitterUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
-  window.open(twitterUrl, '_blank');
+  const twitter = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${url}`;
+  const facebook = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+  const linkedin = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+  const email = `mailto:?subject=Try%20this%20quiz!&body=${encodeURIComponent(text)}%20${url}`;
+
+  const shareHTML = `
+    <p>Share your results:</p>
+    <a href="${twitter}" target="_blank">🐦 Twitter</a><br>
+    <a href="${facebook}" target="_blank">📘 Facebook</a><br>
+    <a href="${linkedin}" target="_blank">💼 LinkedIn</a><br>
+    <a href="${email}" target="_blank">✉️ Email</a>
+  `;
+
+  document.getElementById("quiz").innerHTML += shareHTML;
 }
+
 
 // Start the quiz
 window.onload = showImage;
