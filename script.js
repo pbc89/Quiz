@@ -75,7 +75,7 @@ function showResult() {
 
 function shareResults() {
   const url = encodeURIComponent(window.location.href);
-  const text = `I scored ${score}/${quizData.length} on the "Police or Paramilitary?" quiz!`;
+  const text = `I scored ${score}/${quizData.length} on the "ICE or Terrorist?" quiz!`;
 
   const twitter = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${url}`;
   const facebook = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
